@@ -1,0 +1,45 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+	<title>input输入控件</title>
+	<script src="inputcontrol.js"></script>  
+	<style type="text/css">  
+		input{
+			margin: 50px;
+			line-height: 26px;
+			font-size: 15px;
+		}
+		.about{
+			width: 450px;
+			height: 120px;
+			border: 1px solid #ccc;
+			font-size: 13px;
+			margin-top: 50px;
+			/*padding-left: 50px;*/
+			margin-left: 50px;
+			line-height: 24px;
+			text-indent: 2em;
+		}
+		.about p{
+			margin: 0;
+		}
+	</style>
+</head>  
+
+<body>
+	<input id="lat" type = "text" value="+000°00′00.000000″">
+	<input id="lat1" type = "text" value="00-111-222222-33333">
+	<div class="about">
+		<p>设定默认值和不能修改的位数。</p>
+		<p>只可输入数字。</p>
+		<p>删除键重置对应位置的默认值。</p>
+		<p>输入到不变位置时，将输入值放到下一位去。</p>
+		<p>禁止粘贴。</p>
+	</div>
+	<script>
+		initInput("lat",[1,5,8,11,18],'+000°00′00.000000″');
+		initInput("lat1",[3,7,14],'00-111-222222-33333');
+	</script>
+</body>  
+</html>
