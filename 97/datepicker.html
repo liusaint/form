@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My97DatePicker示例</title>
+	<script type="text/javascript" src="libs/My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="picker1.js"></script>
+	<link type="text/css" href="97.css" rel="stylesheet" media="all" />
+</head>
+
+<body>
+
+	<h1>My97DatePicker代码演示</h1>
+
+	<article class="demo">
+		<h2>1.两日期时间相差30天，不超过当前日期，控件Picker1</h2>
+		开始时间：<input type="text" class="date_input" id="datepicker1"/>
+		结束时间：<input type="text" class="date_input" id="datepicker2"/>
+	</article>
+
+
+	<article class="demo">
+		<h2>1.两日期时间相差15天，不超过当前日期,控件Picker1</h2>
+		开始时间：<input type="text" class="date_input" id="datepicker3"/>
+		结束时间：<input type="text" class="date_input" id="datepicker4"/>
+	</article>
+
+	<script type="text/javascript">
+		var picker1 = new Picker1("datepicker1","datepicker2",30);
+		picker1.init();
+		var picker2 = new Picker1("datepicker3","datepicker4",15);
+		picker2.init();
+	</script>
+
+
+</body>
+</html>

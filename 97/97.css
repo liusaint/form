@@ -1,0 +1,14 @@
+.date_input{
+	width: 150px;
+	height: 32px;
+	line-height: 32px;
+	text-indent: 3px;
+}
+.demo{
+	width: 100%;
+	border:1px solid #ccc;
+	padding: 10px 0;
+	font-size: 13px;
+	margin-bottom: 20px;
+	text-indent: 10px;
+}
