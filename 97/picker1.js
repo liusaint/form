@@ -1,3 +1,9 @@
+/**
+* author:ls
+* email:liusaint@gmail.com
+* date:2016年1月2日
+*/
+
 //IE9以下不能使用bind的处理。
 if (!Function.prototype.bind) { 
 	Function.prototype.bind = function (oThis) { 
@@ -17,7 +23,7 @@ if (!Function.prototype.bind) {
 	}; 
 }
 
-var Picker1 = function(startEle,endEle,day){
+function Picker1(startEle,endEle,day){
 	this.md = new Date();
 	this.startEle = startEle;
 	this.endEle = endEle;
@@ -42,6 +48,10 @@ Picker1.prototype = {
 		var onclearedBind = this.clearedFun.bind({},this);
 
 		WdatePicker({maxDate:'#F{$dp.$D(\''+this.endEle+'\')||\'new Date()\'}',minDate:'#F{$dp.$D(\''+this.endEle+'\',{d:'+this.day+'})}',onpicked:pickedfunBind,oncleared:onclearedBind})
+	},
+	picker2rule:function(ele){
+		// console.log(this.md,this,"in picker2rule");
+		WdatePicker({el:ele,minDate:'#F{$dp.$D(\''+this.startEle+'\')}',maxDate:this.md})
 	},
 	pickedFunc:function(that){
 		//开始日期的输入框的规则，onpicked时候的动作
@@ -68,9 +78,5 @@ Picker1.prototype = {
 		//开始日期的输入框的规则，onpicked时候的动作oncleared
 		that.md=new Date();
 		// console.log(that.md,that,'in clear');
-	},
-	picker2rule:function(ele){
-		// console.log(this.md,this,"in picker2rule");
-		WdatePicker({el:ele,minDate:'#F{$dp.$D(\''+this.startEle+'\')}',maxDate:this.md})
 	}
 };
