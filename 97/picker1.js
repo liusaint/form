@@ -59,8 +59,8 @@ Picker1.prototype = {
 		var M=$dp.cal.getP('M');
 		var D=$dp.cal.getP('d');
 
-		M=parseInt(M)-1;
-		D=parseInt(D) - that.day;　//超过30天，也能自动处理。
+		M=parseInt(M,10)-1;
+		D=parseInt(D,10) - that.day;　//超过30天，也能自动处理。
 		var d = new Date()
 		d.setFullYear(Y,M,D) //设置时间
 
